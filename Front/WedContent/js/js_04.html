@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+//변수 선언
+var data;
+console.log(data)
+
+//에러, 선언되지 않은 변수
+// console.log(num)
+
+console.log("----------------")
+
+var obj;
+console.log(data, typeof(data))
+console.log(obj, typeof(obj))
+console.log("----------------")
+
+if(data == undefined) {
+	console.log("data변수가 초기화 되지 않았음")
+	console.log("자료형도 결정되지 않은 상태를 뜻함")
+}
+
+if(data == null) {
+	console.log("참조 대상이 없다")
+}
+
+if(undefined == null){
+	console.log("undefined == null")
+}
+console.log("----------------")
+
+if(data === undefined){
+	console.log("data === undefined")
+}
+
+if(data === null){
+	console.log("data === null")
+}
+
+
+
+</script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>

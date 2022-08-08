@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+console.log(123)
+console.log('123')
+
+console.log("-----------")
+
+console.log(parseInt('123'))	// '123' -> 123
+console.log(parseInt('123Hi'))	// '123Hi' -> 123
+console.log(parseInt('Hi123'))	// NaN
+console.log(parseInt('456Hi123'))	//'456Hi123' -> 456
+
+console.log("-----------")
+
+console.log(parseFloat("123.456"))	//"123.456" -> "123.456"
+console.log(parseInt("123.456"))	//"123.456" -> "123"
+
+console.log("-----------")
+
+console.log(Number("123.456"))
+console.log(Number("456"))
+
+console.log("-----------")
+
+var n1 = 567.89
+
+console.log(n1.toString())	//10진수 형식의 문자
+
+console.log(n1.toString(2))	//2진수 형식의 문자
+console.log(n1.toString(8))	//8진수 형식의 문자
+console.log(n1.toString(16)) //16진수 형식의 문자
+console.log("-----------")
+
+console.log(n1.toFixed(1))	//소수점 1자리 유지(반올림)
+console.log(n1.toFixed(5))	//소수점 5자리 유지(남는 자리 0으로 채움)
+console.log("-----------")
+
+console.log(String(1234))
+console.log(String(123.4567))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>
