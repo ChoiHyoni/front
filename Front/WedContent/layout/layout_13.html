@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+.imgBox img {
+	width: 300px;
+	height: 200px;	
+}
+
+.imgBox {
+	border: 1px solid #ccc;
+	
+	width: 380px;
+	height: 240px;
+	
+	text-align: center;
+	
+	/* --------------------------------- */
+	
+	/* 요소의 그림자를 생성한다 */
+	/* 	box-shadow: x축이동 y축이동 흐려짐(blur) 펼쳐짐(spread) 색상 */
+	
+	-webkit-box-shadow : 5px 5px 10px 0 #999;
+	-moz-box-shadow : 5px 5px 10px 0 #999;
+	box-shadow : 5px 5px 10px 0 #999;
+	
+	/* -------------------------------------------- */
+
+	/* 요소의 모양을 변형시킨다 */
+	/* 	rotate(degree) - 회전 변형 */
+
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	transform: rotate(10deg);
+}
+
+</style>
+
+
+</head>
+<body>
+
+<!-- 머리글 -->
+<header>
+<h1>SEMANTIC TAG LAYOUT</h1>
+<h3>시맨틱 태그</h3>
+</header>
+
+<hr>
+
+<!-- 네비게이터, 메뉴 -->
+<nav>
+<ul>
+	<li><a href="#">&lt;header&gt; 태그</a></li>
+	<li><a href="#">&lt;nav&gt; 태그</a></li>
+	<li><a href="#">&lt;section&gt; 태그</a></li>
+	<li><a href="#">&lt;article&gt; 태그</a></li>
+	<li><a href="#">&lt;footer&gt; 태그</a></li>
+</ul>
+</nav>
+
+<hr>
+
+<!-- 본문 -->
+<section>
+	<article>
+		<p>본문영역!</p>
+		<p>내용물을 적는 곳</p>
+		<p>기본적인 컨텐츠들이 들어감</p>
+	</article>
+	
+	<article class="imgBox">
+		<img alt="이미지" src="C:\Users\Hyoni\git\front-study\Front\WedContent\layout\사진.jpg"><br>
+		
+		section태그 안에서 article로 이미지 표현중!
+		
+	</article>
+</section>
+
+<hr>
+
+<footer>
+&copy; Lacuna<br>
+
+powered by JIO
+</footer>
+
+</body>
+</html>
