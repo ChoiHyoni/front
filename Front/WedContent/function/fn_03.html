@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+function hello() {
+	console.log("안녕하세요")
+}
+
+function thanks() {
+	console.log("감사해요")
+}
+
+//-------------------------------------------------------
+
+function action(fn) {
+	//매개변수로 받은 함수를 이용한 호출
+	fn();
+	
+	//매개변수로 받은 함수를 리턴
+	return fn;
+}
+
+//에러, 전달한 number데이터를 함수 내부에서 호출코드로 사용함
+// action(123)
+
+//hello 함수를 전달 데이터로 전달하기
+action(hello)
+
+//hello 함수를 전달 데이터로 전달하기
+action(thanks)
+
+console.log("--------------")
+
+//이름없는 함수(익명함수, anonymous function)를 전달인자로 사용
+action(function() {
+	console.log("익명함수 전달")
+})
+
+console.log("--------------")
+
+// action함수를 이용하여 매개변수 hello함수가 호출된다
+// hello함수는 다시 return된다
+// return받은 hello함수를 f 변수에 저장한다
+var f = action(hello)
+
+//반환받은 hello함수가 저장된 f변수를 이용한 호출
+f();
+
+console.log(typeof(f)) //function
+console.log(typeof f)  //function
+console.log("--------------")
+console.log(typeof f())//undefined, f()함수가 호출된 후 리턴값의 타입 검사
+
+console.log("--------------")
+
+action(thanks)()
+
+console.log("--------------")
+
+action( action( action( action( thanks ) ) ) )()
+
+</script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>

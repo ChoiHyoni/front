@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>하이퍼링크 태그</h1>
+<h3>a</h3>
+<hr>
+
+<a>링크! url없이 작성하면 단순 텍스트</a>
+<br>
+<a href="https://www.google.co.kr/">구글로 이동</a>
+<hr>
+
+<div id="top"><h2>여기가 TOP!</h2></div>
+
+<!-- 같은 페이지 내에서 id속성의 값이 bottom인 태그로 이동 -->
+<a href="#bottom">밑으로..</a>
+<hr>
+
+<a href="https://www.google.co.kr/" target="_self">구글로 이동 (현재 탭)</a>
+<!-- target="_self" 가 기본 동작이다 -->
+<a href="https://www.google.co.kr/" target="_blank">구글로 이동 (새 탭)</a>
+<hr>
+
+<!-- 절대경로URL, Absolute URL -->
+<!-- 	-> 도메인주소를 포함한 URL을 뜻한다 -->
+
+<a href="https://www.naver.com/" target="_blank">네이버</a>
+<br>
+
+<a href="https://iei.or.kr/recruit/jobsearch.kh" target="_blank">채용정보 - 구인</a>
+
+<hr>
+<!-- 상대경로URL, Relative URL -->
+<!-- 	-> 도메인 주소를 생략하고 자원의 경로만 적는 URL을 뜻한다 -->
+<!-- 	-> 자기 자신 사이트를 기준으로 URL경로가 지정된다 -->
+
+<!-- 	-> 같은 사이트 내에서 다른 페이지로 이동할 때 사용된다 -->
+
+<ul>
+	<li><a href="/tag/tag_01.html">tag_01</a></li>
+<!-- 	<li><a href="/tag/tag_02.html">tag_02</a></li> -->
+	<li><a href="./tag_02.html">tag_02</a></li>
+<!-- 	<li><a href="/tag/tag_03.html">tag_03</a></li> -->
+	<li><a href="tag_03.html">tag_03</a></li>
+	<li><a href="../test.html">test.html</a></li>
+</ul>
+
+<!-- 	/		루트 디렉토리 -->
+<!-- 			( WebConent폴더, src/main/webapp폴더 -->
+
+<!-- 	./		현재 디렉토리 -->
+<!-- 			./문자를 생략하고 파일이름 바로 사용해도 현재 디렉토리로 적용 -->
+
+<!-- 	../		부모 디렉토리 -->
+
+<hr>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque convallis velit, sed consectetur magna ullamcorper non. Nam dictum est a dolor sodales, iaculis consequat elit efficitur. Praesent in faucibus magna, a consectetur ipsum. Pellentesque porta ligula nulla. Morbi ut velit vel metus sollicitudin sodales. Donec finibus erat eu justo consectetur, at faucibus mauris posuere. Nullam non sagittis velit, ut iaculis risus.</p>
+
+<p>Morbi ut libero vel enim cursus ornare. Nullam convallis nibh justo, a porttitor ligula condimentum convallis. In sed commodo nibh, id feugiat diam. Pellentesque risus ante, aliquam porta nisi sed, euismod interdum eros. Donec blandit sed lorem in sodales. Integer iaculis tristique justo, eget convallis metus finibus vel. Duis molestie turpis purus, vel posuere augue facilisis eu. In eu egestas augue. Pellentesque bibendum aliquet velit, at lobortis diam sodales eget. Morbi quis urna efficitur, bibendum tortor vitae, lobortis mauris. Cras eget imperdiet libero. Vestibulum varius tincidunt nisi ut suscipit. Sed ante odio, tincidunt ac lacus molestie, ullamcorper tincidunt elit. Morbi fermentum at nunc scelerisque sodales. Mauris nec tortor faucibus, placerat purus quis, luctus diam.</p>
+
+<p>Sed eget semper nibh. Mauris purus sem, viverra ultrices laoreet id, ultrices id ex. Suspendisse tortor tortor, finibus vel felis in, convallis sodales justo. Curabitur ultrices fringilla enim quis scelerisque. Curabitur venenatis mauris odio, eget mollis enim faucibus in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus pharetra nibh eget tellus porta, et convallis dolor posuere. Nullam vehicula, sapien tristique accumsan congue, nisl erat convallis eros, nec accumsan quam augue ac nisi. Integer quis nunc ac mauris tempor consectetur ac eu lorem. Curabitur dignissim imperdiet elit, non aliquet enim vehicula vitae.</p>
+
+<p>Cras scelerisque orci volutpat erat pulvinar tempor. Fusce pellentesque viverra enim ut pellentesque. Phasellus at scelerisque tellus. Suspendisse eleifend orci odio, nec ultrices ligula luctus quis. Praesent aliquam fermentum dapibus. Quisque hendrerit faucibus massa, aliquet mattis tellus scelerisque at. Sed vitae dui eget elit bibendum scelerisque sit amet id leo. Aliquam tempor fermentum est, id molestie leo euismod et. Maecenas nibh nisi, fermentum non ipsum at, aliquam mollis est. Sed semper id sapien vitae tempus. Sed dolor magna, luctus viverra metus et, molestie pulvinar nulla. Morbi ex arcu, pellentesque a ante vitae, placerat dictum elit. Quisque augue sem, aliquam sit amet sapien et, dapibus faucibus metus. Maecenas condimentum iaculis dignissim. Fusce in odio commodo, aliquet diam et, lobortis lectus.</p>
+
+<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas pulvinar est eget est vehicula, vitae eleifend tellus bibendum. Maecenas venenatis auctor sapien nec luctus. Vivamus vitae nisi quis lacus elementum lacinia. Nam convallis nulla vel ex rhoncus, vitae interdum odio efficitur. Integer nisl felis, laoreet non metus quis, mattis molestie odio. Praesent purus magna, semper ullamcorper libero eu, laoreet gravida diam. Suspendisse aliquet vestibulum efficitur. Nulla vel cursus erat, eu tempor orci. Maecenas lacinia id nisl eget finibus.</p>
+
+<a href="#">현재 페이지</a>
+<hr>
+
+<div id="bottom"><h2>여기가 BOTTOM!</h2></div>
+
+<!-- 같은 페이지 내에서 id 속성(attribute)의 값이 top인 태그로 이동한다 -->
+<a href="#top">TOP으로!</a>
+
+</body>
+</html>

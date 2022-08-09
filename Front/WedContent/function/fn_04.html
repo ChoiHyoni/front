@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+//변수의 스코프, Scope
+//	-> 변수의 유효범위
+//	-> 변수가 인식되고 사용될 수 있는 범위
+
+//--------------------------------------------------
+//에러, 선언되지 않은 변수를 사용함
+// console.log( data )
+//--------------------------------------------------
+
+//에러나지 않는다
+//	-> 변수를 선언하는 코드보다 이전에 변수를 사용해도 에러X
+console.log("선언 전 :", num) //undefined
+
+var num = 123;
+
+console.log("선언 후 :", num) //123
+
+// JS엔진은 JS코드를 실행하기 전(정적인 시점)에
+// 선언 된 모든 변수를 미리 생성한다
+// 단, 초기화는 하지 않는다
+//	-> 변수는 undefined상태가 된다
+
+// 변수 선언 코드 이전에 변수에 접근할 수 있다
+
+// => 호이스팅(Hoisting) 현상
+
+//--------------------------------------------------
+
+//전역 변수, Global Variable
+//	-> Global Scope(전역 스코프)에 선언된 변수
+
+//	-> <script>태그 안에 곧바로 선언된 변수
+
+var global_var = 1234;
+
+//----------------------------------------
+
+//에러, 함수 스코프의 변수를 함수 밖에서 사용할 수 없다
+// console.log("함수 밖", func_var)
+
+function func() {
+	//함수 지역 스코프, function scope
+	//---------------------------------------------
+	
+	//전역 변수 사용 가능
+	console.log(global_var)
+	
+	//에러나지 않음
+	//	-> function scope에서 호이스팅
+	console.log(func_var)
+	
+	var func_var = 0;
+}
+
+//함수 호출 코드
+func();
+
+//에러
+//-> 함수 스코프의 변수를 함수 밖에서 사용할 수 없다
+//console.log("함수 밖", func_var)
+
+//--------------------------------------------------
+
+//호이스팅 된다
+console.log("블록 전 :", block_var)
+
+//{}중괄호 블록
+//	-> 블록 지역 스코프, Block Scope
+{
+	var block_var = 30;
+	console.log(block_var)
+}
+
+//출력됨, 블록스코프는 무시된다
+console.log("블록 후 :", block_var)
+
+
+for(var i=0; i<5; i++){
+
+}
+console.log("for 후 :", i)
+
+//-----------------------------------------------------
+
+var data = 100;
+var data = 200;
+var data = 300;
+var data = 400;
+
+console.log(data) //400
+
+console.log("----------")
+
+//{}중괄호 블록
+{
+	let block_let = 9999;
+	console.log (block_let)
+	}
+
+//에러
+//	let변수는 블록스코프에 영향을 받는다
+//	블록 스코프를 벗어나면 사용할 수 없다
+// console.log("블록 밖 :", block_let)
+
+console.log("----------")
+
+
+//에러, 호이스팅으로 변수는 만들어지지만 접근할 수 없다
+// let let_data = 789;
+// console.log("선언 전 :", let_data)
+
+let let_data = 10;
+console.log("선언 후 :", let_data)
+
+console.log("----------")
+
+for(let j=0; j<9; j++) {
+}
+
+//에러, let변수는 block스코프가 적용된다
+// console.log("블록 밖 :", j)
+
+console.log("----------")
+
+//에러, 선언과 동시에 초기화 필수
+// const data_const;
+
+const data_const = 654
+
+console.log(data_const)
+
+//에러, 추가적인 대입 불가
+// data_const = 878
+
+console.log("----------")
+
+// let, const 변수들은 같은 이름으로 여러 번 선언할 수 없다
+
+let vaule = 555;
+// let vaule = 666;
+// let vaule = 777;
+
+const cons =999;
+// const cons =888;
+// const cons =777;
+
+</script>
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

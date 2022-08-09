@@ -6,8 +6,55 @@
 
 <script type="text/javascript">
 
+//NaN, Not a Number
 
+console.log(NaN)
+console.log( typeof(NaN) )
 
+console.log( 5 + NaN )
+
+console.log("----------")
+
+//parseInt() 함수
+//	-> 매개변수 문자열을 숫자로 변환하는 함수
+console.log( parseInt("123"))
+console.log( parseInt("123QWE"))
+
+console.log("----------")
+
+//isNaN() 함수
+//	-> 전달인자를 NaN인지 확인하는 함수
+//	-> 숫자 형식(Number Format)인지 확인한다
+console.log( isNaN(123) ) //false
+console.log( isNaN("QWE")) //true
+console.log(isNaN("123"))//false
+
+console.log(isNaN("123QWE")) //true
+
+console.log("----------")
+
+var x = 333;
+
+if (!isNaN(x)) {
+	//x변수가 숫자 형식일 경우에만 수행하도록 설정
+}
+
+console.log("----------")
+
+//Infinity
+
+console.log( Infinity )
+console.log( -Infinity )
+
+console.log( 123/0 )
+console.log( -123/0 )
+console.log("----------")
+
+var data2 = 2344;
+
+if(isFinite(data2)) {
+	//data2가 무한대가 아닐 경우 수행한다
+}
 
 </script>
 
